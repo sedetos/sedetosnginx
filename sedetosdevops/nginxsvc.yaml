@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sedetosnginx-svc
+  labels:
+    run: sedetosnginx-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: nginx-app
+

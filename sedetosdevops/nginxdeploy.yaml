@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sedetosnginx
+  labels:
+    app: sedetosnginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sedetosnginx
+  template:
+    metadata:
+      labels:
+        app: sedetosnginx
+    spec:
+      containers:
+      - name: sedetosnginx
+        image: nginx:stable 
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
