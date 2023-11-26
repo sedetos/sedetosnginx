@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sedetosnginx
-        image: nginx:stable-perl 
+        image: nginx:stable-bullseye 
         ports:
         - containerPort: 80
         resources:
