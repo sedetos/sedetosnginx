@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sedetosdevops
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: sedetosdevops
